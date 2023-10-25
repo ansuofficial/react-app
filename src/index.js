@@ -75,6 +75,7 @@ const BookList = () => {
           title={secondBook.title}
           img={secondBook.img}
         />
+        
       </div>
     </section>
   );
