@@ -20,7 +20,7 @@ const books = [
 ];
 
 const App = () => {
-  
+  <Navbar />
   return (
     <section className="bookList">
       {books.map((el) => {
