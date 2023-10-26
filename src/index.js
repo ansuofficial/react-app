@@ -17,12 +17,13 @@ const secondBook = {
   num: 10,
 };
 
-const Book = ({img, title, authur}) => {
+const Book = ({img, title, authur, children}) => {
   return (
     <article className="book">
       <img src={img} alt={title} />
       <h2>{title}</h2>
       <h4>{authur}</h4>
+      {children}
     </article>
   );
 };
@@ -47,7 +48,7 @@ const BookList = () => {
         />
       </div>
     </section>
-    
+
   );
 };
 
