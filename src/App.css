@@ -43,7 +43,7 @@ body {
 
 .book {
   text-align: center;
-  background: rgb(16, 34, 25);
+  background: rgba(16, 34, 25, 0.5);
   margin: auto;
   padding: 1.5rem;
   border-radius: 1rem;
@@ -73,7 +73,7 @@ body {
 
   .book {
     width: 100%;
-    background: rgb(0, 0, 0);
+    background: rgba(16, 34, 25, 0.1);
     margin: auto;
     padding: 1.5rem;
     border-radius: 1rem;

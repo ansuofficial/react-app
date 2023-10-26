@@ -8,30 +8,32 @@ const books = [
     title: "Interesting Facts For Curious Minds",
     authur: "Jordan Moore",
     img: "https://m.media-amazon.com/images/I/71hwUY5ZmxL._SY342_.jpg",
-    id: 20,
+    id: 20
   },
 
   {
     title: "Killers of the Flower Moon",
     authur: " David Grann",
     img: "https://m.media-amazon.com/images/I/81Xy1ugiWeL._SY342_.jpg",
-    id: 10,
+    id: 10
   },
 ];
 
 const App = () => {
-  <Navbar />
   return (
-    <section className="bookList">
-      {books.map((el) => {
-        return <Book {...el} key={el.id} />;
-      })}
-    </section>
+    <div>
+      <Navbar />
+      <section className="bookList">
+        {books.map((el) => {
+          return <Book {...el} key={el.id} />;
+        })}
+      </section>
+    </div>
   );
 };
 
 const Book = (props) => {
-  const {img, title, authur} = props
+  const { img, title, authur } = props;
   return (
     <article className="book">
       <img src={img} alt={title} />
