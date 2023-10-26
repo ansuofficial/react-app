@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import Navbar from "./Navbar.js";
-// import "./App.css";
+import "./App.css";
 
 const books = [
   {
@@ -20,6 +20,7 @@ const books = [
 ];
 
 const App = () => {
+  <Navbar />
   return (
     <section className="bookList">
       {books.map((el) => {
@@ -30,8 +31,7 @@ const App = () => {
 };
 
 const Book = (props) => {
-  const { img, title, authur } = props;
-  // console.log(props)
+  const {img, title, authur} = props
   return (
     <article className="book">
       <img src={img} alt={title} />
