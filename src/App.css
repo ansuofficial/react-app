@@ -65,8 +65,7 @@ body {
 
 @media screen and (min-width: 716px) {
   .bookList {
-    grid-template-columns: repeat(8, 1fr);
-    overflow-x: auto;
+    grid-template-columns: repeat(3, 1fr);
     margin: auto;
     background: moccasin;
     scrollbar-width: none;

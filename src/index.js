@@ -17,8 +17,7 @@ const secondBook = {
   num: 10,
 };
 
-const Book = (props) => {
-  const { img, title, authur } = props;
+const Book = ({img, title, authur}) => {
   return (
     <article className="book">
       <img src={img} alt={title} />
@@ -37,45 +36,15 @@ const BookList = () => {
           authur={firstBook.authur}
           title={firstBook.title}
           img={firstBook.img}
-        />
+        >
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam fugiat ad saepe!</p>
+          <button>Click me</button>
+        </Book>
         <Book
           authur={secondBook.authur}
           title={secondBook.title}
           img={secondBook.img}
         />
-
-        <Book
-          authur={firstBook.authur}
-          title={firstBook.title}
-          img={firstBook.img}
-        />
-        <Book
-          authur={secondBook.authur}
-          title={secondBook.title}
-          img={secondBook.img}
-        />
-        <Book
-          authur={firstBook.authur}
-          title={firstBook.title}
-          img={firstBook.img}
-        />
-        <Book
-          authur={secondBook.authur}
-          title={secondBook.title}
-          img={secondBook.img}
-        />
-
-        <Book
-          authur={firstBook.authur}
-          title={firstBook.title}
-          img={firstBook.img}
-        />
-        <Book
-          authur={secondBook.authur}
-          title={secondBook.title}
-          img={secondBook.img}
-        />
-        
       </div>
     </section>
   );
