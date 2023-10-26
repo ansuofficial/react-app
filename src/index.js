@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 import Navbar from "./Navbar.js";
 // import "./App.css";
 
@@ -8,38 +8,35 @@ const books = [
     title: "Interesting Facts For Curious Minds",
     authur: "Jordan Moore",
     img: "https://m.media-amazon.com/images/I/71hwUY5ZmxL._SY342_.jpg",
-    num: 20,
+    id: 20,
   },
 
   {
     title: "Killers of the Flower Moon",
     authur: " David Grann",
     img: "https://m.media-amazon.com/images/I/81Xy1ugiWeL._SY342_.jpg",
-    num: 10,
+    id: 10,
   },
 ];
 
-const BookList = () => {
+const App = () => {
   return (
     <section className="bookList">
-      {books.map((b) => {
-        const { img, title, authur, children } = b;
-        return (
-        <Book img={img} title={title} authur={authur} />
-        )
+      {books.map((el) => {
+        return <Book {...el} key={el.id} />;
       })}
     </section>
   );
 };
 
 const Book = (props) => {
-  const {img, title, authur, children} = props
+  const { img, title, authur } = props;
+  // console.log(props)
   return (
     <article className="book">
       <img src={img} alt={title} />
       <h2>{title}</h2>
       <h4>{authur}</h4>
-      {children}
     </article>
   );
 };
@@ -66,4 +63,4 @@ const Book = (props) => {
 //   );
 // };
 
-ReactDOM.createRoot(document.getElementById("root")).render(<BookList />);
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
